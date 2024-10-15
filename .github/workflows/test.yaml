@@ -9,3 +9,22 @@ jobs:
     steps:
       - name: Mensaje
         run: echo "Hola mundito"
+      - name: Touch File #Crea
+        run: |
+          touch hola.txt
+          ls -al
+      
+      - name: Set text #Agrega 
+        run: |
+          echo "Hola mundito" >> hola.txt
+          ls -al
+      
+      - name: Read File #Lee 
+        run: cat hola.txt
+
+  dos:
+    runs-on: ubuntu-latest
+    needs: [uno]
+    steps:
+      - name: Directorio
+        run: ls -al
