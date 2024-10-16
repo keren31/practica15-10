@@ -20,7 +20,7 @@ jobs:
           ls -al
       
       - name: Read File #Lee 
-        run: 
+        run: |
           cat hola.txt
           ls -al
 
